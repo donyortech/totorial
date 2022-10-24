@@ -4,7 +4,7 @@ import { ref, computed } from "vue";
 const questions = ref([
   {
     question: "What is Vue?",
-    answer: 0,
+    answer: 2,
     options: ["A framework", "A library", "A type of hat"],
     selected: null,
   },
@@ -62,7 +62,7 @@ const NextQuestion = () => {
 
 <template>
   <main class="app">
-    <h1>The Quiz</h1>
+    <h1>Quiz</h1>
 
     <section class="quiz" v-if="!quizCompleted">
       <div class="quiz-info">
@@ -112,7 +112,7 @@ const NextQuestion = () => {
     </section>
 
     <section v-else>
-      <h2>You have finished the quiz!</h2>
+      <h2>You have finished the test questions!</h2>
       <p class="your-score">Your score is {{ score }}/{{ questions.length }}</p>
     </section>
   </main>
@@ -149,13 +149,16 @@ h1 {
   padding: 1rem;
   width: 600px;
   max-width: 640px;
+  position: absolute;
+  top: 20%;
 }
 
 .score {
-  margin-left: 10px;
   font-size: 18px;
+  position: relative;
+  top: -50px;
 }
-.your-score{
+.your-score {
   color: #000000;
 }
 .quiz-info {
