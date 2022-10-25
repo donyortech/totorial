@@ -3,24 +3,39 @@ import { ref, computed } from "vue";
 
 const questions = ref([
   {
-    question: "What is Vue?",
-    answer: 2,
-    options: ["A framework", "A library", "A type of hat"],
+    question: "Inside which HTML element do we put the JavaScript?",
+    answer: 0,
+    options: ["<script>", "<js>", "<javascript>"],
     selected: null,
   },
   {
-    question: "What is Vuex used for?",
+    question:
+      "What is the correct syntax for referring to an external script called 'xxx.js'?",
     answer: 2,
-    options: ["Eating a delicious snack", "Viewing things", "State management"],
+    options: [
+      "<script name = 'xxx.js'>",
+      "<script href='xxx.js'>",
+      "<script src='xxx.js'>",
+    ],
     selected: null,
   },
   {
-    question: "What is Vue Router?",
+    question: "How do you write 'Hello World' in an alert box?",
     answer: 1,
     options: [
-      "An ice cream maker",
-      "A routing library for Vue",
-      "Burger sauce",
+      "msg('Hello World')",
+      "alert('Hello World')",
+      "msgBox('Hello World')",
+    ],
+    selected: null,
+  },
+  {
+    question: "How can you add a comment in a JavaScript?",
+    answer: 2,
+    options: [
+      "'This is a comment'",
+      "//This is a comment",
+      "<!--This is a comment-->",
     ],
     selected: null,
   },
@@ -136,7 +151,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  height: 100vh;
+  height: 80vh;
 }
 
 h1 {
@@ -150,13 +165,15 @@ h1 {
   width: 600px;
   max-width: 640px;
   position: absolute;
-  top: 20%;
+  top: 30%;
 }
 
 .score {
   font-size: 18px;
   position: relative;
   top: -50px;
+  width: 110px;
+
 }
 .your-score {
   color: #000000;
